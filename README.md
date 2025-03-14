@@ -86,5 +86,5 @@ go test ./... -v
 ## More Examples?
 For more comprehensive examples, check out:
 
-* [Creating a NGIX Pod and make http calls](./kluster1/nginx_pod_test.go)
+* [Creating a NGINX Pod and make http calls](./kluster1/nginx_pod_test.go)
 * [Set up a cluster to be shared by multiple tests in the same package](./kluster1/shared_cluster_test.go)
