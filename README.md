@@ -30,7 +30,6 @@ Developing and testing Kubernetes applications locally using traditional tools l
 * **Easy Integration:**  Simple API to integrate into existing Go testing frameworks.
 
 ## Quick Start
----
 1. Add the `kluster1` module to your Go project
 ```bash
 go get https://github.com/ogarciacar/kluster1
@@ -74,7 +73,7 @@ func TestKubernetesApp(t *testing.T) {
   }
   
   if kluster1.K8sRelease_v1_30_10.String() == serverVersion.String() {
-    t.Fatalf("should be the same server version: expected %s got, %s",      kluster1.K8sRelease_v1_30_10.String(), serverVersion.String())
+    t.Fatalf("should be the same server version: expected %s got, %s", kluster1.K8sRelease_v1_30_10.String(), serverVersion.String())
   }
 }
 ```
@@ -85,7 +84,6 @@ go test ./... -v
 ```
 
 ## More Examples?
----
 For more comprehensive examples, check out:
 
 * [Creating a NGIX Pod and make http calls](./kluster1/nginx_pod_test.go)
