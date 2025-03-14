@@ -32,7 +32,7 @@ Developing and testing Kubernetes applications locally using traditional tools l
 ## Quick Start
 1. Add the `kluster1` module to your Go project
 ```bash
-go get https://github.com/ogarciacar/kluster1
+go get github.com/ogarciacar/kluster1
 ```
 
 2. Write your first Kubernetes App test
