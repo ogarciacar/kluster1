@@ -19,7 +19,7 @@ var k1 *kluster1.K
 // 4. Ensures the cluster is cleaned up after the test completes.
 func TestMain(m *testing.M) {
 
-	var err error = nil
+	var err error
 
 	// 1. Creates a new Kubernetes cluster with a specified release version.
 	k1, err = kluster1.NewCluster(kluster1.K8sRelease_v1_30_10)
@@ -57,6 +57,6 @@ func safeTest(t *testing.T, testFunc func(t *testing.T)) {
 		}
 	}()
 
-	// Executes test funciton
+	// Executes test function
 	testFunc(t)
 }
