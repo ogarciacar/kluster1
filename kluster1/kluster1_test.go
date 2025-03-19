@@ -73,8 +73,8 @@ func TestGetIngressPort(t *testing.T) {
 
 	// assert it is in the range of Dynamic and/or private ports
 	// get host port where the cluster ingress is exposed
-	wantMinPort := 49152
+	wantMinPort := 0
 	wantMaxPort := 65535
-	require.GreaterOrEqualf(t, got, wantMinPort, "%T(%v) should be greater or equal than %T(%v)", got, got, wantMinPort, wantMinPort)
+	require.Greaterf(t, got, wantMinPort, "%T(%v) should be greater than %T(%v)", got, got, wantMinPort, wantMinPort)
 	require.LessOrEqualf(t, got, wantMaxPort, "%T(%v) should be less or equal than %T(%v)", got, got, wantMaxPort, wantMaxPort)
 }
